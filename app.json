@@ -1,0 +1,9 @@
+{
+  "name": "aural",
+  "android": {
+    "package": "io.aural.client"
+  },
+  "ios": {
+    "bundleIdentifier": "io.aural.client"
+  }
+}
