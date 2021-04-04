@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import TrackPlayer, {usePlaybackState} from 'react-native-track-player';
 import LinearGradient from 'react-native-linear-gradient';
@@ -9,6 +9,7 @@ import localTrack from './pure.m4a';
 
 const PlaylistScreen = () => {
   const playbackState = usePlaybackState();
+  const [currentTrack, setCurrentTrack] = useState(null);
 
   useEffect(() => {
     setup();
@@ -30,6 +31,7 @@ const PlaylistScreen = () => {
         TrackPlayer.CAPABILITY_PAUSE,
       ],
     });
+    togglePlayback();
   }
 
   async function togglePlayback() {
@@ -37,18 +39,10 @@ const PlaylistScreen = () => {
     if (currentTrack == null) {
       await TrackPlayer.reset();
       await TrackPlayer.add(playlistData);
-      await TrackPlayer.add({
-        id: 'local-track',
-        url: localTrack,
-        title: 'Pure (Demo)',
-        artist: 'David Chavez',
-        artwork:
-          'https://i.pinimg.com/474x/90/e3/41/90e34121229253d293dcd6e8e40b6f44.jpg',
-        duration: 28,
-      });
-      await TrackPlayer.play();
+      setCurrentTrack(await TrackPlayer.getCurrentTrack());
     } else {
-      if (playbackState === TrackPlayer.STATE_PAUSED) {
+      setCurrentTrack(await TrackPlayer.getCurrentTrack());
+      if (playbackState === TrackPlayer.STATE_PAUSED || playbackState === TrackPlayer.STATE_READY) {
         await TrackPlayer.play();
       } else {
         await TrackPlayer.pause();
@@ -68,8 +62,9 @@ const PlaylistScreen = () => {
           style={styles.player}
           onPrevious={skipToPrevious}
           onTogglePlayback={togglePlayback}
+          currentTrack={currentTrack}
         />
-        <Text style={styles.state}>{getStateName(playbackState)}</Text>
+        {/* <Text style={styles.state}>{getStateName(playbackState)}</Text> */}
       </LinearGradient>
     </View>
   );

@@ -31,8 +31,8 @@
 		36A06173261A20D20081EF7C /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36A06163261A20D20081EF7C /* Zocial.ttf */; };
 		36A06174261A20D20081EF7C /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36A06164261A20D20081EF7C /* SimpleLineIcons.ttf */; };
 		36A06175261A20D20081EF7C /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36A06165261A20D20081EF7C /* MaterialCommunityIcons.ttf */; };
-		36A0617B261A25070081EF7C /* Bangers-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36A0617A261A25070081EF7C /* Bangers-Regular.ttf */; };
 		36A0617F261A25190081EF7C /* ConcertOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36A0617E261A25180081EF7C /* ConcertOne-Regular.ttf */; };
+		36A06203261A2C4E0081EF7C /* ContrailOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36A06202261A2C4E0081EF7C /* ContrailOne-Regular.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -74,8 +74,8 @@
 		36A06163261A20D20081EF7C /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
 		36A06164261A20D20081EF7C /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		36A06165261A20D20081EF7C /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
-		36A0617A261A25070081EF7C /* Bangers-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Bangers-Regular.ttf"; path = "Resources/Bangers-Regular.ttf"; sourceTree = "<group>"; };
-		36A0617E261A25180081EF7C /* ConcertOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ConcertOne-Regular.ttf"; path = "Resources/ConcertOne-Regular.ttf"; sourceTree = "<group>"; };
+		36A0617E261A25180081EF7C /* ConcertOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ConcertOne-Regular.ttf"; sourceTree = "<group>"; };
+		36A06202261A2C4E0081EF7C /* ContrailOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ContrailOne-Regular.ttf"; sourceTree = "<group>"; };
 		392B87881B224A55976B3C0F /* aural-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "aural-Bridging-Header.h"; path = "aural/aural-Bridging-Header.h"; sourceTree = "<group>"; };
 		54D19DC52452904167BC1A7F /* Pods-aural-auralTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aural-auralTests.debug.xcconfig"; path = "Target Support Files/Pods-aural-auralTests/Pods-aural-auralTests.debug.xcconfig"; sourceTree = "<group>"; };
 		707B904764FAD6800B74CAAB /* libPods-aural.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-aural.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +156,8 @@
 				36A06157261A20D10081EF7C /* EvilIcons.ttf */,
 				36A0615D261A20D20081EF7C /* Feather.ttf */,
 				36A06162261A20D20081EF7C /* FontAwesome.ttf */,
+				36A0617E261A25180081EF7C /* ConcertOne-Regular.ttf */,
+				36A06202261A2C4E0081EF7C /* ContrailOne-Regular.ttf */,
 				36A06158261A20D10081EF7C /* FontAwesome5_Brands.ttf */,
 				36A0615A261A20D20081EF7C /* FontAwesome5_Regular.ttf */,
 				36A06160261A20D20081EF7C /* FontAwesome5_Solid.ttf */,
@@ -193,8 +195,6 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				36A0617E261A25180081EF7C /* ConcertOne-Regular.ttf */,
-				36A0617A261A25070081EF7C /* Bangers-Regular.ttf */,
 				36A0607C261A14610081EF7C /* Resources */,
 				36A05CBD2617D9B50081EF7C /* File.swift */,
 				13B07FAE1A68108700A75B9A /* aural */,
@@ -310,8 +310,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A06203261A2C4E0081EF7C /* ContrailOne-Regular.ttf in Resources */,
 				36A0617F261A25190081EF7C /* ConcertOne-Regular.ttf in Resources */,
-				36A0617B261A25070081EF7C /* Bangers-Regular.ttf in Resources */,
 				36A06166261A20D20081EF7C /* AntDesign.ttf in Resources */,
 				36A06167261A20D20081EF7C /* EvilIcons.ttf in Resources */,
 				36A06168261A20D20081EF7C /* FontAwesome5_Brands.ttf in Resources */,

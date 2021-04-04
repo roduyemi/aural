@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import TrackPlayer, {
   useTrackPlayerProgress,
@@ -13,13 +13,14 @@ import {
   View,
   ViewPropTypes,
 } from 'react-native';
+import { Icon } from 'react-native-elements'
 
 function ProgressBar() {
   const progress = useTrackPlayerProgress();
 
   return (
     <View style={styles.progress}>
-      <View style={{flex: progress.position, backgroundColor: 'red'}} />
+      <View style={{flex: progress.position, backgroundColor: '#ee6367'}} />
       <View
         style={{
           flex: progress.duration - progress.position,
@@ -43,31 +44,43 @@ ControlButton.propTypes = {
   onPress: PropTypes.func.isRequired,
 };
 
-const Player = props => {
+const Player = ({style, onNext, onPrevious, onTogglePlayback, currentTrack}) => {
   const playbackState = usePlaybackState();
   const [trackTitle, setTrackTitle] = useState('');
   const [trackArtwork, setTrackArtwork] = useState();
   const [trackArtist, setTrackArtist] = useState('');
-  useTrackPlayerEvents(['playback-track-changed'], async event => {
-    if (event.type === TrackPlayer.TrackPlayerEvents.PLAYBACK_TRACK_CHANGED) {
-      const track = await TrackPlayer.getTrack(event.nextTrack);
-      const {title, artist, artwork} = track || {};
-      setTrackTitle(title);
-      setTrackArtist(artist);
-      setTrackArtwork(artwork);
+
+  useEffect(() => {
+    const updateTrackData = async () => {
+      getTrackData(currentTrack);
     }
+    updateTrackData();
+  }, [currentTrack]);
+
+  const getTrackData = async track => {
+    if (track) {
+      const trackData = await TrackPlayer.getTrack(track);
+      setTrackData(trackData);
+    }
+  }
+
+  useTrackPlayerEvents(['playback-track-changed'], async ({ type, track, nextTrack }) => {
+    getTrackData(nextTrack || track);
   });
 
-  const {style, onNext, onPrevious, onTogglePlayback} = props;
-
-  var middleButtonText = 'Play';
-
-  if (
-    playbackState === TrackPlayer.STATE_PLAYING ||
-    playbackState === TrackPlayer.STATE_BUFFERING
-  ) {
-    middleButtonText = 'Pause';
+  const setTrackData = (trackData) => {
+    const {title, artist, artwork} = trackData;
+    console.log(trackData);
+    setTrackTitle(title);
+    setTrackArtist(artist);
+    setTrackArtwork(artwork);
   }
+
+  const isPlaying = () =>
+    [TrackPlayer.STATE_PLAYING, TrackPlayer.STATE_BUFFERING].includes(playbackState);
+
+
+  const buttonType = isPlaying() ? 'pause-circle' : 'play-circle';
 
   return (
     <View style={[styles.card, style]}>
@@ -76,9 +89,31 @@ const Player = props => {
       <Text style={styles.title}>{trackTitle}</Text>
       <Text style={styles.artist}>{trackArtist}</Text>
       <View style={styles.controls}>
-        <ControlButton title={'<<'} onPress={onPrevious} />
-        <ControlButton title={middleButtonText} onPress={onTogglePlayback} />
-        <ControlButton title={'>>'} onPress={onNext} />
+        <Icon
+          name='play-back-outline'
+          type='ionicon'
+          color='rgba(0, 0, 0, 1)'
+          onPress={onPrevious}
+          iconStyle={{ fontSize: 30, marginTop: 10 }}
+        />
+        <Icon
+          // reverse
+          name={buttonType}
+          type='font-awesome'
+          color='rgba(0, 0, 0, 1)'
+          
+          onPress={onTogglePlayback}
+          iconStyle={{ fontSize: 30, marginTop: 10, marginRight: 20, marginLeft: 20 }}
+          reverseColor
+          solid
+        />
+        <Icon
+          name='play-forward-outline'
+          type='ionicon'
+          color='rgba(0, 0, 0, 1)'
+          onPress={onNext}
+          iconStyle={{ fontSize: 30, marginTop: 10 }}
+        />
       </View>
     </View>
   );
@@ -102,18 +137,26 @@ const styles = StyleSheet.create({
     width: '80%',
     elevation: 1,
     borderRadius: 4,
-    shadowRadius: 2,
+    // borderColor: 'rgba(255, 255, 255, 0.1)',
+    // borderWidth: 2,
+    shadowRadius: 4,
     shadowOpacity: 0.1,
     alignItems: 'center',
     shadowColor: 'black',
-    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+    // backgroundColor: 'rgba(0, 0, 0, 0.1)',
     shadowOffset: {width: 0, height: 1},
   },
   cover: {
     width: 140,
     height: 140,
-    marginTop: 20,
-    backgroundColor: 'grey',
+    marginTop: -50,
+    // backgroundColor: 'rgba(87.1, 76.5, 94.6, 0.2)',
+    backgroundColor: '#b78494',
+    borderRadius: 4,
+    borderColor: 'rgba(255, 255, 255, 0.1)',
+    borderWidth: 1,
+    shadowRadius: 4,
+    shadowOpacity: 0.1,
   },
   progress: {
     height: 1,
@@ -135,7 +178,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   controlButtonText: {
-    fontSize: 18,
+    fontSize: 40,
     textAlign: 'center',
+    fontFamily: 'Teko-Light',
   },
 });
