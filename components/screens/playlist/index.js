@@ -4,18 +4,30 @@ import TrackPlayer, {usePlaybackState} from 'react-native-track-player';
 import LinearGradient from 'react-native-linear-gradient';
 
 import Player from '../../player';
-import playlistData from './playlist.json';
-import localTrack from './pure.m4a';
+import PlaylistItems from './items';
+import { getData, storeData } from '../../../utils/playlist';
+
+const PLAYLIST_KEY = 'playlist';
 
 const PlaylistScreen = () => {
   const playbackState = usePlaybackState();
   const [currentTrack, setCurrentTrack] = useState(null);
+  const [playlist, setPlaylist] = useState(null)
 
   useEffect(() => {
-    setup();
+    const getPlaylist = async () => {
+      const playlist = await getData(PLAYLIST_KEY);
+      await setPlaylist(playlist);
+      setup(playlist);
+    };
+    getPlaylist();
   }, []);
 
-  async function setup() {
+  useEffect(() => {
+
+  }, [playlist])
+
+  async function setup(playlist) {
     await TrackPlayer.setupPlayer({});
     await TrackPlayer.updateOptions({
       stopWithApp: true,
@@ -31,17 +43,18 @@ const PlaylistScreen = () => {
         TrackPlayer.CAPABILITY_PAUSE,
       ],
     });
-    togglePlayback();
+    togglePlayback(playlist);
   }
 
-  async function togglePlayback() {
+  async function togglePlayback(playlist) {
     const currentTrack = await TrackPlayer.getCurrentTrack();
     if (currentTrack == null) {
       await TrackPlayer.reset();
-      await TrackPlayer.add(playlistData);
+      console.log('playlist', playlist);
+      await TrackPlayer.add(playlist);
       setCurrentTrack(await TrackPlayer.getCurrentTrack());
     } else {
-      setCurrentTrack(await TrackPlayer.getCurrentTrack());
+      setCurrentTrack(currentTrack);
       if (playbackState === TrackPlayer.STATE_PAUSED || playbackState === TrackPlayer.STATE_READY) {
         await TrackPlayer.play();
       } else {
@@ -55,8 +68,6 @@ const PlaylistScreen = () => {
       <LinearGradient
         colors={['#bd8d93', '#72578a', '#213385']}
         style={styles.linearGradient}>
-        {/* <Text style={styles.description}>
-        </Text> */}
         <Player
           onNext={skipToNext}
           style={styles.player}
@@ -64,6 +75,7 @@ const PlaylistScreen = () => {
           onTogglePlayback={togglePlayback}
           currentTrack={currentTrack}
         />
+        <PlaylistItems currentTrack={currentTrack} playlist={playlist} />
         {/* <Text style={styles.state}>{getStateName(playbackState)}</Text> */}
       </LinearGradient>
     </View>
@@ -105,13 +117,8 @@ async function skipToPrevious() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center',
-  },
-  description: {
-    width: '80%',
-    marginTop: 20,
-    textAlign: 'center',
+    // flex: 1,
+    // alignItems: 'center',
   },
   player: {
     // marginTop: 40,
@@ -123,7 +130,6 @@ const styles = StyleSheet.create({
   linearGradient: {
     alignItems: 'center',
     justifyContent: 'center',
-    // borderRadius: 5,
     height: '100%',
     width: '100%',
   },

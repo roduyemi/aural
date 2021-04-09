@@ -3,18 +3,19 @@ import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {Button} from 'react-native-elements';
 import TrackPlayer, {usePlaybackState} from 'react-native-track-player';
+import Footer from '../../footer';
 
 const LandingScreen = ({navigation}) => {
 
   const navigateTo = path => navigation.navigate(path);
   const playbackState = usePlaybackState();
 
-  const [title, setTitle] = useState('Create playlist')
+  const [title, setTitle] = useState('Create playlist');
 
   useEffect(() => {
     playbackState === TrackPlayer.STATE_NONE ?
       setTitle('Create playlist') : setTitle('Back to playlist');
-  }, [playbackState])
+  }, [playbackState]);
 
   return (
     <View style={styles.container}>
@@ -30,6 +31,7 @@ const LandingScreen = ({navigation}) => {
               borderRadius: 2,
               borderColor: 'rgba(255, 255, 255, 0.3)',
               borderWidth: 1,
+              marginBottom: 250
             }}
             titleStyle={{
               color: 'rgba(255, 255, 255, 0.8)',
@@ -40,6 +42,7 @@ const LandingScreen = ({navigation}) => {
           />
         </TouchableOpacity>
         <Text style={styles.footer}>Curated audio experiences</Text>
+        {/* <Footer /> */}
       </LinearGradient>
     </View>
   );
@@ -52,10 +55,10 @@ const styles = StyleSheet.create({
     // backgroundColor: '#213385',
   },
   header: {
-    color: 'rgba(1.9, 4.6, 12.3, 0.8)',
+    color: 'rgba(1.9, 4.6, 12.3, 0.75)',
     fontFamily: 'Teko-Light',
-    fontSize: 80,
-    // marginBottom: 300,
+    fontSize: 90,
+    marginBottom: -10,
     fontWeight: 'bold',
     textAlign: 'center',
   },
@@ -63,7 +66,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   footer: {
-    marginTop: 275,
+    marginBottom: -30,
     fontFamily: 'ContrailOne-Regular',
     fontSize: 16,
     color: 'rgba(255, 255, 255, 0.6)',

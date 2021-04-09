@@ -70,7 +70,6 @@ const Player = ({style, onNext, onPrevious, onTogglePlayback, currentTrack}) => 
 
   const setTrackData = (trackData) => {
     const {title, artist, artwork} = trackData;
-    console.log(trackData);
     setTrackTitle(title);
     setTrackArtist(artist);
     setTrackArtwork(artwork);
@@ -145,6 +144,7 @@ const styles = StyleSheet.create({
     shadowColor: 'black',
     // backgroundColor: 'rgba(0, 0, 0, 0.1)',
     shadowOffset: {width: 0, height: 1},
+    marginTop: 80
   },
   cover: {
     width: 140,
