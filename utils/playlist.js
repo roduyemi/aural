@@ -13,6 +13,7 @@ export const getData = async (key) => {
 export const storeData = async (key, value) => {
   try {
     const jsonValue = JSON.stringify(value);
+    console.log(`saving ${jsonValue} as ${key}`);
     await AsyncStorage.setItem(key, jsonValue);
   } catch (e) {
     console.log(e);

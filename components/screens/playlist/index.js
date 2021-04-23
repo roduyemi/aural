@@ -23,9 +23,7 @@ const PlaylistScreen = () => {
     getPlaylist();
   }, []);
 
-  useEffect(() => {
-
-  }, [playlist])
+  const updateTrack = (track) => setCurrentTrack(track);
 
   async function setup(playlist) {
     await TrackPlayer.setupPlayer({});
@@ -44,6 +42,7 @@ const PlaylistScreen = () => {
       ],
     });
     togglePlayback(playlist);
+    storeData(PLAYLIST_KEY, playlist);
   }
 
   async function togglePlayback(playlist) {
@@ -74,6 +73,7 @@ const PlaylistScreen = () => {
           onPrevious={skipToPrevious}
           onTogglePlayback={togglePlayback}
           currentTrack={currentTrack}
+          updateTrack={updateTrack}
         />
         <PlaylistItems currentTrack={currentTrack} playlist={playlist} />
         {/* <Text style={styles.state}>{getStateName(playbackState)}</Text> */}
@@ -83,25 +83,6 @@ const PlaylistScreen = () => {
 };
 
 export default PlaylistScreen;
-
-// PlaylistScreen.navigationOptions = {
-//   title: 'Playlist Example',
-// };
-
-function getStateName(state) {
-  switch (state) {
-    case TrackPlayer.STATE_NONE:
-      return 'None';
-    case TrackPlayer.STATE_PLAYING:
-      return 'Playing';
-    case TrackPlayer.STATE_PAUSED:
-      return 'Paused';
-    case TrackPlayer.STATE_STOPPED:
-      return 'Stopped';
-    case TrackPlayer.STATE_BUFFERING:
-      return 'Buffering';
-  }
-}
 
 async function skipToNext() {
   try {

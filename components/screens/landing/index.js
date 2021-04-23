@@ -10,12 +10,12 @@ const LandingScreen = ({navigation}) => {
   const navigateTo = path => navigation.navigate(path);
   const playbackState = usePlaybackState();
 
-  const [title, setTitle] = useState('Create playlist');
+  const [title, setTitle] = useState('Go to playlist');
 
-  useEffect(() => {
-    playbackState === TrackPlayer.STATE_NONE ?
-      setTitle('Create playlist') : setTitle('Back to playlist');
-  }, [playbackState]);
+  // useEffect(() => {
+  //   playbackState === TrackPlayer.STATE_NONE ?
+  //     setTitle('Create playlist') : setTitle('Back to playlist');
+  // }, [playbackState]);
 
   return (
     <View style={styles.container}>
