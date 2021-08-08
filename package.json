@@ -27,6 +27,7 @@
     "react-native-reanimated": "~1.13.0",
     "react-native-safe-area-context": "^3.1.9",
     "react-native-screens": "~2.15.0",
+    "react-native-share-menu": "^5.0.3",
     "react-native-swift": "^1.2.3",
     "react-native-track-player": "^1.2.7",
     "react-native-unimodules": "~0.12.0",
