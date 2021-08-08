@@ -15,6 +15,8 @@
 		36A05CBE2617D9B50081EF7C /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A05CBD2617D9B50081EF7C /* File.swift */; };
 		36A06887261BA8540081EF7C /* Teko-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36A06815261BA74C0081EF7C /* Teko-Light.ttf */; };
 		36A0688A261BA8710081EF7C /* ContrailOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36A06811261BA74C0081EF7C /* ContrailOne-Regular.ttf */; };
+		36A0703F26430B5A0081EF7C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A0703D26430B5A0081EF7C /* MainInterface.storyboard */; };
+		36A0704826430C3F0081EF7C /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A0704726430C3F0081EF7C /* ShareViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,53 @@
 		36A06813261BA74C0081EF7C /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		36A06814261BA74C0081EF7C /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
 		36A06815261BA74C0081EF7C /* Teko-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Teko-Light.ttf"; sourceTree = "<group>"; };
+		36A0703926430B5A0081EF7C /* AuralShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AuralShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A0703E26430B5A0081EF7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		36A0704026430B5A0081EF7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36A0704726430C3F0081EF7C /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShareViewController.swift; path = "../../node_modules/react-native-share-menu/ios/ShareViewController.swift"; sourceTree = "<group>"; };
+		36A0707A26430D5A0081EF7C /* AuralShareRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AuralShareRelease.entitlements; sourceTree = "<group>"; };
+		36A0707B26430DF70081EF7C /* clientRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = clientRelease.entitlements; path = aural/clientRelease.entitlements; sourceTree = "<group>"; };
+		36A070F326431C8E0081EF7C /* libReact-Core.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-Core.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A070FE26431D420081EF7C /* libRNShareMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNShareMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A0710326431D780081EF7C /* libReact-CoreModules.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-CoreModules.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A0710526431D800081EF7C /* libReact-Core.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-Core.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07115264323260081EF7C /* libBVLinearGradient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBVLinearGradient.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07117264323260081EF7C /* libDoubleConversion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libDoubleConversion.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07119264323260081EF7C /* libFBReactNativeSpec.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFBReactNativeSpec.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A0711B264323260081EF7C /* libFBSDKCoreKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFBSDKCoreKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A0711D264323260081EF7C /* libFBSDKLoginKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFBSDKLoginKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A0711F264323260081EF7C /* libFBSDKShareKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFBSDKShareKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07121264323260081EF7C /* libFolly.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFolly.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07123264323260081EF7C /* libglog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglog.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07125264323260081EF7C /* libPods-aural-auralTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-aural-auralTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07127264323260081EF7C /* libPods-aural.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-aural.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07129264323260081EF7C /* libRCTTypeSafety.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRCTTypeSafety.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A0712B264323260081EF7C /* libReact-Core.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-Core.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A0712D264323260081EF7C /* libReact-CoreModules.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-CoreModules.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A0712F264323260081EF7C /* libReact-cxxreact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-cxxreact.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07131264323260081EF7C /* libReact-jsi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-jsi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07133264323260081EF7C /* libReact-jsiexecutor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-jsiexecutor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07135264323260081EF7C /* libReact-jsinspector.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-jsinspector.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07137264323260081EF7C /* libreact-native-fbsdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libreact-native-fbsdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07139264323260081EF7C /* libreact-native-safe-area-context.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libreact-native-safe-area-context.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A0713B264323260081EF7C /* libreact-native-track-player.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libreact-native-track-player.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A0713D264323260081EF7C /* libReact-RCTAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A0713F264323260081EF7C /* libReact-RCTBlob.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTBlob.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07141264323260081EF7C /* libReact-RCTImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTImage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07143264323260081EF7C /* libReact-RCTLinking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTLinking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07145264323260081EF7C /* libReact-RCTNetwork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTNetwork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07147264323260081EF7C /* libReact-RCTSettings.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTSettings.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07149264323260081EF7C /* libReact-RCTText.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTText.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A0714B264323260081EF7C /* libReact-RCTVibration.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTVibration.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A0714D264323260081EF7C /* libReactCommon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReactCommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A0714F264323260081EF7C /* libRNCAsyncStorage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNCAsyncStorage.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07151264323260081EF7C /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07153264323260081EF7C /* libRNReanimated.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNReanimated.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07155264323260081EF7C /* libRNScreens.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNScreens.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07157264323260081EF7C /* libRNShareMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNShareMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A07159264323260081EF7C /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A0715B264323260081EF7C /* libYoga.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libYoga.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A071D326432C290081EF7C /* libRNShareMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNShareMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		392B87881B224A55976B3C0F /* aural-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "aural-Bridging-Header.h"; path = "aural/aural-Bridging-Header.h"; sourceTree = "<group>"; };
 		54D19DC52452904167BC1A7F /* Pods-aural-auralTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aural-auralTests.debug.xcconfig"; path = "Target Support Files/Pods-aural-auralTests/Pods-aural-auralTests.debug.xcconfig"; sourceTree = "<group>"; };
 		707B904764FAD6800B74CAAB /* libPods-aural.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-aural.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +134,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		36A0703626430B5A0081EF7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -108,6 +164,7 @@
 		13B07FAE1A68108700A75B9A /* aural */ = {
 			isa = PBXGroup;
 			children = (
+				36A0707B26430DF70081EF7C /* clientRelease.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -122,6 +179,47 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				36A071D326432C290081EF7C /* libRNShareMenu.a */,
+				36A07115264323260081EF7C /* libBVLinearGradient.a */,
+				36A07117264323260081EF7C /* libDoubleConversion.a */,
+				36A07119264323260081EF7C /* libFBReactNativeSpec.a */,
+				36A0711B264323260081EF7C /* libFBSDKCoreKit.a */,
+				36A0711D264323260081EF7C /* libFBSDKLoginKit.a */,
+				36A0711F264323260081EF7C /* libFBSDKShareKit.a */,
+				36A07121264323260081EF7C /* libFolly.a */,
+				36A07123264323260081EF7C /* libglog.a */,
+				36A07125264323260081EF7C /* libPods-aural-auralTests.a */,
+				36A07127264323260081EF7C /* libPods-aural.a */,
+				36A07129264323260081EF7C /* libRCTTypeSafety.a */,
+				36A0712B264323260081EF7C /* libReact-Core.a */,
+				36A0712D264323260081EF7C /* libReact-CoreModules.a */,
+				36A0712F264323260081EF7C /* libReact-cxxreact.a */,
+				36A07131264323260081EF7C /* libReact-jsi.a */,
+				36A07133264323260081EF7C /* libReact-jsiexecutor.a */,
+				36A07135264323260081EF7C /* libReact-jsinspector.a */,
+				36A07137264323260081EF7C /* libreact-native-fbsdk.a */,
+				36A07139264323260081EF7C /* libreact-native-safe-area-context.a */,
+				36A0713B264323260081EF7C /* libreact-native-track-player.a */,
+				36A0713D264323260081EF7C /* libReact-RCTAnimation.a */,
+				36A0713F264323260081EF7C /* libReact-RCTBlob.a */,
+				36A07141264323260081EF7C /* libReact-RCTImage.a */,
+				36A07143264323260081EF7C /* libReact-RCTLinking.a */,
+				36A07145264323260081EF7C /* libReact-RCTNetwork.a */,
+				36A07147264323260081EF7C /* libReact-RCTSettings.a */,
+				36A07149264323260081EF7C /* libReact-RCTText.a */,
+				36A0714B264323260081EF7C /* libReact-RCTVibration.a */,
+				36A0714D264323260081EF7C /* libReactCommon.a */,
+				36A0714F264323260081EF7C /* libRNCAsyncStorage.a */,
+				36A07151264323260081EF7C /* libRNGestureHandler.a */,
+				36A07153264323260081EF7C /* libRNReanimated.a */,
+				36A07155264323260081EF7C /* libRNScreens.a */,
+				36A07157264323260081EF7C /* libRNShareMenu.a */,
+				36A07159264323260081EF7C /* libRNVectorIcons.a */,
+				36A0715B264323260081EF7C /* libYoga.a */,
+				36A0710526431D800081EF7C /* libReact-Core.a */,
+				36A0710326431D780081EF7C /* libReact-CoreModules.a */,
+				36A070FE26431D420081EF7C /* libRNShareMenu.a */,
+				36A070F326431C8E0081EF7C /* libReact-Core.a */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				707B904764FAD6800B74CAAB /* libPods-aural.a */,
 				8186720FC92BD2A21A0A9988 /* libPods-aural-auralTests.a */,
@@ -155,6 +253,17 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		36A0703A26430B5A0081EF7C /* AuralShare */ = {
+			isa = PBXGroup;
+			children = (
+				36A0707A26430D5A0081EF7C /* AuralShareRelease.entitlements */,
+				36A0704726430C3F0081EF7C /* ShareViewController.swift */,
+				36A0703D26430B5A0081EF7C /* MainInterface.storyboard */,
+				36A0704026430B5A0081EF7C /* Info.plist */,
+			);
+			path = AuralShare;
+			sourceTree = "<group>";
+		};
 		6D3229B9E0A606576B97F065 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +290,7 @@
 				13B07FAE1A68108700A75B9A /* aural */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* auralTests */,
+				36A0703A26430B5A0081EF7C /* AuralShare */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				6D3229B9E0A606576B97F065 /* Pods */,
@@ -195,6 +305,7 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* client.app */,
 				00E356EE1AD99517003FC87E /* auralTests.xctest */,
+				36A0703926430B5A0081EF7C /* AuralShare.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,12 +354,30 @@
 			productReference = 13B07F961A680F5B00A75B9A /* client.app */;
 			productType = "com.apple.product-type.application";
 		};
+		36A0703826430B5A0081EF7C /* AuralShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36A0704326430B5A0081EF7C /* Build configuration list for PBXNativeTarget "AuralShare" */;
+			buildPhases = (
+				36A0703526430B5A0081EF7C /* Sources */,
+				36A0703626430B5A0081EF7C /* Frameworks */,
+				36A0703726430B5A0081EF7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AuralShare;
+			productName = AuralShare;
+			productReference = 36A0703926430B5A0081EF7C /* AuralShare.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -257,6 +386,10 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1120;
+					};
+					36A0703826430B5A0081EF7C = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -275,6 +408,7 @@
 			targets = (
 				13B07F861A680F5B00A75B9A /* aural */,
 				00E356ED1AD99517003FC87E /* auralTests */,
+				36A0703826430B5A0081EF7C /* AuralShare */,
 			);
 		};
 /* End PBXProject section */
@@ -293,6 +427,14 @@
 			files = (
 				36A0688A261BA8710081EF7C /* ContrailOne-Regular.ttf in Resources */,
 				36A06887261BA8540081EF7C /* Teko-Light.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36A0703726430B5A0081EF7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36A0703F26430B5A0081EF7C /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +573,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		36A0703526430B5A0081EF7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36A0704826430C3F0081EF7C /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -440,6 +590,17 @@
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		36A0703D26430B5A0081EF7C /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36A0703E26430B5A0081EF7C /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
@@ -509,8 +670,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = aural/aural.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5VJ6N69QQ2;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = aural/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -536,9 +699,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = aural/aural.entitlements;
+				CODE_SIGN_ENTITLEMENTS = aural/clientRelease.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5VJ6N69QQ2;
 				INFOPLIST_FILE = aural/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -554,6 +719,73 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		36A0704126430B5A0081EF7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 5VJ6N69QQ2;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = AuralShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.aural.client.AuralShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		36A0704226430B5A0081EF7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = AuralShare/AuralShareRelease.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 5VJ6N69QQ2;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = AuralShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.aural.client.AuralShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -699,6 +931,15 @@
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
 				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36A0704326430B5A0081EF7C /* Build configuration list for PBXNativeTarget "AuralShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36A0704126430B5A0081EF7C /* Debug */,
+				36A0704226430B5A0081EF7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
