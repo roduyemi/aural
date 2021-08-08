@@ -1,6 +1,7 @@
 # aural
-WIP: _A React Native cross-platform aural experience._
-Note: Currently only configured for iOS.
+_A React Native cross-platform aural experience._ (WIP)
+
+Note: Currently only configured for iOS
 
 # Reflex
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* auralTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* auralTests.m */; };
+		082D62636C5A022722314C7A /* libPods-aural.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A07127264323260081EF7C /* libPods-aural.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		232810B9FE5FFF060AA57FB0 /* libPods-aural-auralTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8186720FC92BD2A21A0A9988 /* libPods-aural-auralTests.a */; };
@@ -17,6 +18,7 @@
 		36A0688A261BA8710081EF7C /* ContrailOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36A06811261BA74C0081EF7C /* ContrailOne-Regular.ttf */; };
 		36A0703F26430B5A0081EF7C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A0703D26430B5A0081EF7C /* MainInterface.storyboard */; };
 		36A0704826430C3F0081EF7C /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A0704726430C3F0081EF7C /* ShareViewController.swift */; };
+		699CA867B47701AD3966AA83 /* libPods-aural-auralTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A07125264323260081EF7C /* libPods-aural-auralTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				232810B9FE5FFF060AA57FB0 /* libPods-aural-auralTests.a in Frameworks */,
+				699CA867B47701AD3966AA83 /* libPods-aural-auralTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D46B31671C4FD71A77176F2 /* libPods-aural.a in Frameworks */,
+				082D62636C5A022722314C7A /* libPods-aural.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
