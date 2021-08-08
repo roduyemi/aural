@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { useTrackPlayerProgress } from 'react-native-track-player';
-import { StyleSheet, View } from 'react-native';
+import {useTrackPlayerProgress} from 'react-native-track-player';
+import {StyleSheet, View} from 'react-native';
 
 const ProgressBar = () => {
   const progress = useTrackPlayerProgress();

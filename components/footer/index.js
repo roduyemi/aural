@@ -8,8 +8,8 @@ const Footer = () => (
     accessibilityRole={'image'}
     source={backgroundImg}
     style={styles.background}
-    imageStyle={styles.logo}>
-  </ImageBackground>
+    imageStyle={styles.logo}
+  />
 );
 
 const styles = StyleSheet.create({
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     marginLeft: -128,
     marginBottom: -100,
-  }
+  },
 });
 
 export default Footer;

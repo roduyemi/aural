@@ -1,15 +1,23 @@
 import React, {useEffect, useState} from 'react';
-import {StyleSheet, Text, View, ScrollView, StatusBar, VirtualizedList, SafeAreaView, Image} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  StatusBar,
+  VirtualizedList,
+  SafeAreaView,
+  Image,
+} from 'react-native';
 // import TrackPlayer, {usePlaybackState} from 'react-native-track-player';
 import LinearGradient from 'react-native-linear-gradient';
 import TrackPlayer, {usePlaybackState} from 'react-native-track-player';
 
 import playlistData from './playlist.json';
 
-const PlaylistItems = ({ currentTrack, playlist }) => {
+const PlaylistItems = ({currentTrack, playlist}) => {
   // [playlistData, setPlaylistData] = useState(playlist);
   // const playbackState = usePlaybackState();
-
 
   // useEffect(() => {
   //   setPlaylistData(playlist)
@@ -17,16 +25,14 @@ const PlaylistItems = ({ currentTrack, playlist }) => {
 
   const track = async () => await TrackPlayer.getCurrentTrack();
 
-  const getItemCount = (data) => 5;
+  const getItemCount = data => 5;
 
-  const getItemStyle = id => id === currentTrack ? styles.playingItem : styles.idleItem;
+  const getItemStyle = id =>
+    id === currentTrack ? styles.playingItem : styles.idleItem;
 
-  const Item = ({ id, url, title, artist, artwork, duration }) => (
+  const Item = ({id, url, title, artist, artwork, duration}) => (
     <View style={getItemStyle(id)}>
-      <Image
-        style={styles.tinyLogo}
-        source={{uri: artwork}}
-      />
+      <Image style={styles.tinyLogo} source={{uri: artwork}} />
       <View style={styles.textData}>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.text}>{artist}</Text>
@@ -41,7 +47,7 @@ const PlaylistItems = ({ currentTrack, playlist }) => {
     <SafeAreaView style={styles.container}>
       <VirtualizedList
         data={playlistData}
-        renderItem={({ item }) =>
+        renderItem={({item}) => (
           <Item
             id={item.id}
             url={item.url}
@@ -50,12 +56,11 @@ const PlaylistItems = ({ currentTrack, playlist }) => {
             artwork={item.artwork}
             duration={item.duration}
           />
-        }
+        )}
         getItemCount={getItemCount}
         getItem={getItem}
       />
     </SafeAreaView>
-    
   );
 };
 
@@ -69,7 +74,7 @@ const itemStyle = {
   padding: 10,
   borderWidth: 1,
   borderRadius: 2,
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -85,7 +90,7 @@ const styles = StyleSheet.create({
   idleItem: {
     ...itemStyle,
     // borderColor: 'rgba(120.5, 130.7, 200, 0.9)',
-    borderWidth: 0
+    borderWidth: 0,
   },
   textData: {
     marginHorizontal: 10,
@@ -94,8 +99,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 16,
   },
-  text: {
-  },
+  text: {},
   tinyLogo: {
     width: 50,
     height: 50,

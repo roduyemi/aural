@@ -1,14 +1,18 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import playlistData from './playlist.json';
 
-export const getData = async (key) => {
+export const getData = async key => {
   try {
     const jsonValue = await AsyncStorage.getItem(key);
-    return jsonValue != null ? JSON.parse(jsonValue) : (key.includes('playlist') ? playlistData : null);
-  } catch(e) {
+    return jsonValue != null
+      ? JSON.parse(jsonValue)
+      : key.includes('playlist')
+      ? playlistData
+      : null;
+  } catch (e) {
     console.log(e);
   }
-}
+};
 
 export const storeData = async (key, value) => {
   try {
@@ -18,4 +22,4 @@ export const storeData = async (key, value) => {
   } catch (e) {
     console.log(e);
   }
-}
+};

@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 
-const ControlButton = ({ title, onPress }) => (
+const ControlButton = ({title, onPress}) => (
   <TouchableOpacity style={styles.controlButtonContainer} onPress={onPress}>
     <Text style={styles.controlButtonText}>{title}</Text>
   </TouchableOpacity>

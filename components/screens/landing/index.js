@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {Button} from 'react-native-elements';
@@ -6,7 +6,6 @@ import TrackPlayer, {usePlaybackState} from 'react-native-track-player';
 import Footer from '../../footer';
 
 const LandingScreen = ({navigation}) => {
-
   const navigateTo = path => navigation.navigate(path);
   const playbackState = usePlaybackState();
 
@@ -22,7 +21,7 @@ const LandingScreen = ({navigation}) => {
       <LinearGradient
         colors={['#bd8d93', '#72578a', '#213385']}
         style={styles.linearGradient}>
-        <Text style={styles.header}>aura</Text>
+        <Text style={styles.header}>aural</Text>
         <TouchableOpacity onPress={() => navigateTo('Playlist')}>
           <Button
             title={title}
@@ -31,12 +30,12 @@ const LandingScreen = ({navigation}) => {
               borderRadius: 2,
               borderColor: 'rgba(255, 255, 255, 0.3)',
               borderWidth: 1,
-              marginBottom: 250
+              marginBottom: 250,
             }}
             titleStyle={{
               color: 'rgba(255, 255, 255, 0.8)',
               fontFamily: 'ContrailOne-Regular',
-              fontStyle: 'italic'
+              fontStyle: 'italic',
             }}
             onPress={() => navigateTo('Playlist')}
           />

@@ -5,14 +5,14 @@ import LinearGradient from 'react-native-linear-gradient';
 
 import Player from '../../player';
 import PlaylistItems from './items';
-import { getData, storeData } from '../../../utils/playlist';
+import {getData, storeData} from '../../../utils/playlist';
 
 const PLAYLIST_KEY = 'playlist';
 
 const PlaylistScreen = () => {
   const playbackState = usePlaybackState();
   const [currentTrack, setCurrentTrack] = useState(null);
-  const [playlist, setPlaylist] = useState(null)
+  const [playlist, setPlaylist] = useState(null);
 
   useEffect(() => {
     const getPlaylist = async () => {
@@ -23,7 +23,7 @@ const PlaylistScreen = () => {
     getPlaylist();
   }, []);
 
-  const updateTrack = (track) => setCurrentTrack(track);
+  const updateTrack = track => setCurrentTrack(track);
 
   async function setup(playlist) {
     await TrackPlayer.setupPlayer({});
@@ -54,7 +54,10 @@ const PlaylistScreen = () => {
       setCurrentTrack(await TrackPlayer.getCurrentTrack());
     } else {
       setCurrentTrack(currentTrack);
-      if (playbackState === TrackPlayer.STATE_PAUSED || playbackState === TrackPlayer.STATE_READY) {
+      if (
+        playbackState === TrackPlayer.STATE_PAUSED ||
+        playbackState === TrackPlayer.STATE_READY
+      ) {
         await TrackPlayer.play();
       } else {
         await TrackPlayer.pause();

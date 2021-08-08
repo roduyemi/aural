@@ -15,7 +15,7 @@ const Player = ({
   onPrevious,
   onTogglePlayback,
   currentTrack,
-  updateTrack
+  updateTrack,
 }) => {
   const playbackState = usePlaybackState();
   const [trackTitle, setTrackTitle] = useState('');
